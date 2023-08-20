@@ -18,10 +18,14 @@ class User {
         }
         return {success: false, msg : '존재하지 않는 아이디'}
     }
-    register(){
+    async register(){
         const client = this.body;
-        userStorage.save(client);
-        return {success : true, msg : '회원가입 성공'}
+        try{
+            const response = await userStorage.save(client);
+            return response;
+        } catch(err){
+            return {success : false, msg : err}
+        }
     }
 }
 
