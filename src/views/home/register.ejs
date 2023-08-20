@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/home/login.css">
-    <script src="/js/home/login.js" defer></script>
+    <script src="/js/home/register.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -12,9 +12,11 @@
         <div class="form">
           <form class="login-form">
             <input type="text" placeholder="아이디" id="id" required/>
+            <input type="text" placeholder="이름" id="name" required/>
             <input type="password" placeholder="비밀번호" id="pw" required/>
-            <button type="button">login</button>
-            <p class="message">Not registered? <a href="/register">Create an account</a></p>
+            <input type="password" placeholder="비밀번호재입렵" id="confirm-pw" required/>
+            <button type="button">SIGN UP</button>
+            <p class="message">Already registered? <a href="/login">login</a></p>
           </form>
         </div>
       </div>
