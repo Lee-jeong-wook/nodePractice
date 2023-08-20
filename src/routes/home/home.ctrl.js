@@ -18,9 +18,9 @@ const output = {
 
 //post방식으로 보낼 코드
 const process = {
-    login: (req, res) => {
+    login: async (req, res) => {
         const user = new User(req.body);
-        const response = user.login();
+        const response = await user.login();
         console.log(response)
         return res.json(response);
     },
