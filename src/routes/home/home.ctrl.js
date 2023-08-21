@@ -26,8 +26,8 @@ const process = {
     },
     register: async (req, res) => {
         const user = new User(req.body);
+        // user 데이터 받아오고 실행되어야 하니까 await 처리
         const response = await user.register();
-        console.log(response);
         return res.json(response);
     }
 };

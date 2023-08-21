@@ -8,11 +8,11 @@ class User {
     }
     async login(){
         const client = this.body;
-        const {id, pw} = await userStorage.getUsersInfo(client.id);
+        const {id, pw, name} = await userStorage.getUsersInfo(client.id);
 
         if(id){
             if (id === client.id && pw === client.pw){
-                return{success : true};
+                return{success : true, msg : `${name}님 환영합니다`};
             }
             return { success : false, msg : '비번 틀림'}
         }
